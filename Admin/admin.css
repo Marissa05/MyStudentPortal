@@ -25,6 +25,7 @@ h1 {
   margin-bottom: 30px;  /* space above card */
 }
 
+/*resources*/
 .card {
   display: flex;
   flex-direction: row; /* image left, text right */
@@ -55,11 +56,19 @@ h1 {
   box-shadow: 0 12px 30px rgba(0,0,0,0.4);
 }
 
+
+/*documents*/
+.profile-pic-section{
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
+
 .profile-header {
   display: flex;
   align-items: center;
   gap: 30px;
   margin-bottom: 20px;
+  color: white;
 }
 
 .profile-pic {
@@ -74,3 +83,65 @@ h1 {
   margin: 5px 0;
   font-size: 1.1em;
 }
+
+.documents {
+  color: white;
+  text-align: center;
+}
+
+label {
+  color: white;
+}
+
+.personal-details{
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
+
+.contact-details{
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
+
+.address-details{
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
+
+.profile{
+  border-bottom: 2px solid white;
+  margin-bottom: 5px;
+}
+
+/* Make each section's input boxes into 2 columns */
+.personal-details,
+.contact-details,
+.address-details,
+.profile {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px 40px; /* row-gap column-gap */
+  padding: 10px 20px;
+}
+
+/* Make each input box stack label and input */
+.input-box {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: make input and select full width of column */
+.input-box input,
+.input-box select {
+  padding: 5px 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+h3 {
+  text-align: center;
+}
+
+
