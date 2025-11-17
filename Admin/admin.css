@@ -1,19 +1,20 @@
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.navbar, .nav-link, .navbar-brand {
-  font-family: 'Courier New', Courier, monospace;
+.navbar,
+.nav-link,
+.navbar-brand {
+  font-family: Arial, Helvetica, sans-serif;
 }
-
 
 body {
   min-height: 100vh;
   margin: 0;
-  flex-direction: column;  
-  align-items: center;      
+  flex-direction: column;
+  align-items: center;
   background: linear-gradient(135deg, #4b6cb7, #182848);
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Heading styling */
@@ -21,8 +22,8 @@ h1 {
   text-align: center;
   color: goldenrod;
   font-size: 60px;
-  margin-top: 60px;     /* space from top of page */
-  margin-bottom: 30px;  /* space above card */
+  margin-top: 60px; /* space from top of page */
+  margin-bottom: 30px; /* space above card */
 }
 
 /*resources*/
@@ -32,16 +33,16 @@ h1 {
   background-color: #fff;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   margin: 8px;
   margin-top: 16px;
   width: 800px;
 }
 
 .card-img-left {
-  width: 150px;        /* fixed width for image */
+  width: 150px; /* fixed width for image */
   height: auto;
-  object-fit: cover;    /* keeps image aspect ratio */
+  object-fit: cover; /* keeps image aspect ratio */
   border-radius: 10px 0 0 10px;
 }
 
@@ -53,12 +54,11 @@ h1 {
 
 .card:hover {
   transform: translateZ(50px) scale(1.05) rotateY(2deg);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
-
 /* personal documents*/
-.profile-pic-section{
+.profile-pic-section {
   border-bottom: 2px solid white;
   margin-bottom: 5px;
 }
@@ -96,12 +96,10 @@ label {
 .personal-details,
 .contact-details,
 .address-details,
-.profile{
+.profile {
   border-bottom: 2px solid white;
   margin-bottom: 5px;
 }
-
-
 
 .personal-details,
 .contact-details,
@@ -109,7 +107,7 @@ label {
 .profile {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 columns */
-  gap: 20px 40px; 
+  gap: 20px 40px;
   padding: 10px 20px;
 }
 
@@ -127,12 +125,6 @@ label {
   font-size: 1em;
 }
 
-
-
-
-
-
-
 /* downloads, uploads*/
 table {
   width: 100%;
@@ -142,20 +134,17 @@ table {
   overflow: hidden;
 }
 
-
 thead th {
   padding: 12px;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0, 0, 0, 0.3);
   color: white;
   text-align: left;
   font-size: 1rem;
 }
 
-
 tbody tr {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
-
 
 td {
   padding: 12px;
@@ -163,11 +152,9 @@ td {
   font-size: 0.95rem;
 }
 
-
 tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
-
 
 td button {
   padding: 6px 14px;
@@ -184,13 +171,6 @@ td button {
 td button:hover {
   background-color: rgb(230, 230, 230);
 }
-
-
-
-
-
-
-
 
 
 
