@@ -49,6 +49,9 @@
               <a class="nav-link" href="../admin/documents.html">Documents</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="index.html">index</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item">
@@ -62,27 +65,21 @@
     
     <div class="container">
       <div class="container-box">
-        <form action="../admin/dashboard.html">
-          <h2>Login</h2>
+        <form id="loginForm">
+  <h2>Login</h2>
 
-          <div class="input-box">      
-            <input type="email" required>
-            <label>Email</label>
-            <span class="icon">
-              <ion-icon name="mail"></ion-icon>
-            </span>
-          </div>
+  <div class="input-box">
+    <input type="email" id="regEmail" required />
+    <label>Email</label>
+  </div>
 
-          <div class="input-box">
-            <input type="password" required>
-            <label>Password</label>
-            <span class="icon">
-              <ion-icon name="lock-closed"></ion-icon>
-            </span>
-          </div>
+  <div class="input-box">
+    <input type="password" id="loginPassword" required />
+    <label>Password</label>
+  </div>
 
-          <button type="submit">Login</button>
-        </form>
+  <button type="submit">Login</button>
+</form>
       </div>
     </div>
 
@@ -94,5 +91,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="public.js"></script>
   </body>
 </html>

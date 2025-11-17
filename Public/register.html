@@ -48,6 +48,9 @@
               <a class="nav-link" href="../admin/documents.html">Documents</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="index.html">index</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact Us</a>
             </li>
             <li class="nav-item">
@@ -60,52 +63,32 @@
 
     <div class="container">
       <div class="container-box">
-        <form action="login.html">
-          <h2>Register</h2>
+        <form id="registerForm">
+  <h2>Register</h2>
 
-          <div class="input-box">          
-            <input type="text" required />
-            <label>Full Name</label>
-            <span class="icon">
-              <ion-icon name="person"></ion-icon>
-            </span>
-          </div>
-
-          <div class="input-box">           
-            <input type="email" required>
-            <label>Email</label>
-            <span class="icon">
-              <ion-icon name="mail"></ion-icon>
-            </span>
-          </div>
+  <div class="input-box">
+    <input type="text" id="fullName" required />
+    <label>Full Name</label>
+  </div>
 
 
-          <div class="input-box">          
-            <input type="password" required>
-            <label>Password</label>
-            <span class="icon">
-              <ion-icon name="lock-closed"></ion-icon>
-            </span>
-          </div>
+  <div class="input-box">
+    <input type="email" id="regEmail" required />
+    <label>Email</label>
+  </div>
 
+  <div class="input-box">
+    <input type="password" id="regPassword" required />
+    <label>Password</label>
+  </div>
 
-          <div class="input-box">         
-            <input type="password" required>
-            <label>Confirm Password</label>
-            <span class="icon">
-              <ion-icon name="lock-closed"></ion-icon>
-            </span>
-          </div>
+  <div class="input-box">
+    <input type="password" id="regConfirm" required />
+    <label>Confirm Password</label>
+  </div>
 
-          <button type="submit">Register</button><br><br>
-
-          <div class="register-link">
-            <p>
-              Already have an account?
-              <a href="login.html">Login</a>
-            </p>
-          </div>
-        </form>
+  <button type="submit">Register</button>
+</form>
       </div>
     </div>
 
@@ -117,5 +100,7 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
+    <script src="public.js"></script>
   </body>
 </html>
