@@ -1,236 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Dashboard</title>
-    <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <!--     Fonts and icons     -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      type="text/css"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
     />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
-    />
-    <!-- Material Icons -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
-      rel="stylesheet"
-    />
-    <!-- Material Kit CSS -->
-    <link href="assets/css/material-kit.css?v=3.0.0" rel="stylesheet" />
     <link rel="stylesheet" href="admin.css" />
-
-    <style>
-      table {
-        width: auto;
-        border-collapse: collapse;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        align-items: center;
-        margin: auto;
-      }
-
-      .table-contents {
-        display: flex;
-        justify-content: center;
-      }
-
-      table th,
-      table td {
-        border: 1px solid #ddd;
-        padding: 10px;
-        text-align: center;
-      }
-
-      table th {
-        background-color: #2b2b62;
-        color: white;
-      }
-    </style>
   </head>
 
   <body>
-    <!-- Navbar Transparent -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="../public/index.html">Edutrek</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <!-- ADMIN LINKS -->
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html"
-                >Dashboard<ion-icon name="clipboard"></ion-icon
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="download.html"
-                >Download<ion-icon name="cloud-download"></ion-icon
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upload.html"
-                >Upload<ion-icon name="cloud-upload"></ion-icon
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resources.html"
-                >Resources<ion-icon name="albums"></ion-icon
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="documents.html"
-                >Documents<ion-icon name="documents"></ion-icon
-              ></a>
-            </li>
-            <!-- PUBLIC LINKS -->
-            <li class="nav-item">
-              <a class="nav-link" href="../public/contact.html"
-                >Contact Us<ion-icon name="call"></ion-icon
-              ></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../public/login.html"
-                >Log Out<ion-icon name="log-out"></ion-icon
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-    <!-- End Navbar -->
-
-    <div
-      class="page-header min-vh-80"
-      style="
-        background-image: url('https://images.unsplash.com/photo-1630752708689-02c8636b9141?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2490&q=80');
-      "
-    >
-      <span class="mask bg-gradient-dark opacity-6"></span>
-      <div class="container">
-        <div class="row">
-          <div class="col-md-8 mx-auto">
-            <div class="text-center">
-              <h1 class="text-white">Your title here</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
-      <div class="container">
-        <div class="section text-center">
-          <h2 class="title">See your important notices here.</h2>
-        </div>
-      </div>
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="download.html">Downloads</a>
+      <a href="upload.html">Uploads</a>
+      <a href="documents.html">Documents</a>
+      <a href="resources.html">Resources</a>
+      <a href="../public/contact.html">Contact</a>
+      <a href="../public/login.html">Login</a>
+      <a href="../public/register.html">Register</a>
     </div>
 
-    <div class="time-table">
-      <div class="table-contaents">
-        <table>
-          <thead>
-            <tr>
-              <th rowspan="2">Module</th>
-              <th rowspan="2">Module Code</th>
-
-              <th colspan="2">FA1</th>
-              <th colspan="2">FA2</th>
-              <th colspan="2">PM-02</th>
-              <th colspan="2">Summative</th>
-              <th colspan="2">Supplementary</th>
-            </tr>
-
-            <tr>
-              <th>Hand In</th>
-              <th>Hand Out</th>
-              <th>Hand In</th>
-              <th>Hand Out</th>
-              <th>Hand In</th>
-              <th>Hand Out</th>
-              <th>Hand In/Out</th>
-              <th>Time</th>
-              <th>Hand In/Out</th>
-              <th>Time</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>Web Design</td>
-              <td>LT-90</td>
-
-              <td>03-03-2026</td>
-              <td>16-03-2026</td>
-
-              <td>05-04-2026</td>
-              <td>10-04-2026</td>
-
-              <td>15-04-2026</td>
-              <td>25-04-2026</td>
-
-              <td>01-05-2026</td>
-              <td>09:00</td>
-
-              <td>20-05-2026</td>
-              <td>09:00</td>
-            </tr>
-
-            <tr>
-              <td>Work enviroment Learning</td>
-              <td>MT-50</td>
-
-              <td>01-06-2026</td>
-              <td>11-06-2026</td>
-
-              <td>10-06-2026</td>
-              <td>22-06-2026</td>
-
-              <td>25-06-2026</td>
-              <td>4-07-2026</td>
-
-              <td>06-07-2026</td>
-              <td>09:00</td>
-
-              <td>11-07-2026</td>
-              <td>09:00</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- CONTENT -->
+    <div class="content">
+      <div class="page-header" style="min-height: 300px; background-image: url('https://images.unsplash.com/photo-1630752708689-02c8636b9141?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2490&q=80'); background-size: cover; background-position: center; border-radius: 12px; margin-bottom: 30px;">
+        <div style="background: rgba(0,0,0,0.6); height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 12px;">
+          <h1 style="color: goldenrod; text-align: center;">Welcome to your Dashboard</h1>
+        </div>
       </div>
+
+      <!-- NOTICES -->
+      <div class="card card-body shadow-xl" style="background: rgba(255,255,255,0.05); border-radius: 12px; margin-bottom: 40px;">
+        <h2 style="text-align: center; color: white; margin-bottom: 20px;">See your important notices here</h2>
+      </div>
+
+      <!-- SCHEDULE TABLE -->
+      <section class="schedule">
+        <div class="table-container">
+          <h3 style="color: white; margin-bottom: 20px;">Schedule</h3>
+          <table>
+            <thead>
+              <tr>
+                <th rowspan="2">Module</th>
+                <th rowspan="2">Module Code</th>
+                <th colspan="2">FA1</th>
+                <th colspan="2">FA2</th>
+                <th colspan="2">PM-02</th>
+                <th colspan="2">Summative</th>
+                <th colspan="2">Supplementary</th>
+              </tr>
+              <tr>
+                <th>Hand In</th>
+                <th>Hand Out</th>
+                <th>Hand In</th>
+                <th>Hand Out</th>
+                <th>Hand In</th>
+                <th>Hand Out</th>
+                <th>Hand In/Out</th>
+                <th>Time</th>
+                <th>Hand In/Out</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Web Design</td>
+                <td>LT-90</td>
+                <td>03-03-2026</td>
+                <td>16-03-2026</td>
+                <td>05-04-2026</td>
+                <td>10-04-2026</td>
+                <td>15-04-2026</td>
+                <td>25-04-2026</td>
+                <td>01-05-2026</td>
+                <td>09:00</td>
+                <td>20-05-2026</td>
+                <td>09:00</td>
+              </tr>
+              <tr>
+                <td>Work Environment Learning</td>
+                <td>MT-50</td>
+                <td>01-06-2026</td>
+                <td>11-06-2026</td>
+                <td>10-06-2026</td>
+                <td>22-06-2026</td>
+                <td>25-06-2026</td>
+                <td>04-07-2026</td>
+                <td>06-07-2026</td>
+                <td>09:00</td>
+                <td>11-07-2026</td>
+                <td>09:00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- EVENTS TABLE -->
+      <section class="events">
+        <div class="table-container">
+          <h3 style="color: white; margin-bottom: 20px;">Upcoming Events</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Event</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>14-25 Feb 2025</td>
+                <td>Student Orientation</td>
+              </tr>
+              <tr>
+                <td>15 Mar 2025</td>
+                <td>Student Braai</td>
+              </tr>
+              <tr>
+                <td>20 Apr 2025</td>
+                <td>Movie Night</td>
+              </tr>
+              <tr>
+                <td>21-30 Apr 2025</td>
+                <td>Student Holiday</td>
+              </tr>
+              <tr>
+                <td>31 Apr 2025</td>
+                <td>Classes Commence</td>
+              </tr>
+              <tr>
+                <td>5 May 2025</td>
+                <td>Mid-Year Tests</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
     </div>
 
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
     ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
-
-    <script>
-      // Get stored username and display greeting
-      const username = localStorage.getItem("username");
-      if (username) {
-        const title = document.querySelector(".text-center h1");
-        title.textContent = `Welcome, ${username}! `;
-      }
-    </script>
+    <script src="db.js"></script>
   </body>
 </html>

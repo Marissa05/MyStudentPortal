@@ -1,158 +1,142 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Index</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="admin.css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="admin.css" />
   </head>
   <body>
+    <div class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="download.html">Downloads</a>
+      <a href="upload.html">Uploads</a>
+      <a href="documents.html">Documents</a>
+      <a href="resources.html">Resources</a>
+      <a href="../public/contact.html">Contact</a>
+      <a href="../public/login.html">Login</a>
+      <a href="../public/register.html">Register</a>
+    </div>
 
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Edutrek</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">Dashboard<ion-icon name="clipboard"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="download.html">Downloads<ion-icon name="cloud-download"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upload.html">Upload<ion-icon name="cloud-upload"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resources.html">Resources<ion-icon name="albums"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="documents.html">Documents<ion-icon name="documents"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Public/contact.html">Contact Us<ion-icon name="call"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Public/login.html">Log Out<ion-icon name="log-out"></ion-icon></a>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <div class="content">
+      <h1>Resources</h1>
 
-    <h1>Resources</h1>
+      <section class="resources">
+        <div class="resources-card">
+          <div class="resources-card-contents">
+            <img
+              src="images/HTML5_Guide.jpg"
+              alt="The beginners guide to HTML5"
+            />
+          </div>
+          <div class="text">
+            <p><strong>Title:</strong>The Essential Guide to HTML5</p>
+            <p><strong>Author: </strong>Jeanine Meyer</p>
+            <p>
+              <strong>Description: </strong>Gain a deep, practical knowledge of
+              the basic tools used for webpages: hypertext markup language
+              (HTML5), cascading style sheets (CSS), and JavaScript. This
+              updated version includes new and improved games and exercises, and
+              will serve total beginners as well as people with some programming
+              language experience, but not familiar with the combination of
+              HTML, CSS, and JavaScript.
+            </p>
+            <p>
+              <strong>Link: </strong>
+              <a
+                href="https://learning.oreilly.com/course/modern-html-/9781835880562/"
+                target="_blank"
+              >
+                Essential Guide to HTML
+              </a>
+            </p>
+            <button class="read-more">Read more</button>
+          </div>
+        </div>
 
-    <section class="resources">
-      <div class="card">
-        <div class="card-contents">
-          <img
-            src="images/HTML5_Guide.jpg"
-            alt="The beginners guide to HTML5"
-          />
+        <div class="resources-card">
+          <div class="resources-card-contents">
+            <img
+              src="images/Python_Course.jpg"
+              alt="The beginners guide to HTML5"
+            />
+          </div>
+          <div class="text">
+            <p><strong>Title:</strong>The Complete Python Course</p>
+            <p><strong>Author: </strong>Jose Salvatierra Fuentes</p>
+            <p>
+              <strong>Description: </strong>In this 34 hr course, you'll learn
+              Python by embarking on a journey from beginner to expert levels,
+              building real-world applications as you progress. Start with the
+              basics and move on to advanced topics like object-oriented
+              programming, testing, APIs, and more.
+            </p>
+            <p>
+              <strong>Link: </strong>
+              <a
+                href="https://learning.oreilly.com/course/modern-html-/9781835880562/"
+                target="_blank"
+              >
+                Modern HTML & CSS Course
+              </a>
+            </p>
+            <button class="read-more">Read more</button>
+          </div>
         </div>
-        <div class="text">
-          <p><strong>Title:</strong>The Essential Guide to HTML5</p>
-          <p><strong>Author: </strong>Jeanine Meyer</p>
-          <p>
-            <strong>Description: </strong>Gain a deep, practical knowledge of
-            the basic tools used for webpages: hypertext markup language
-            (HTML5), cascading style sheets (CSS), and JavaScript. This updated
-            version includes new and improved games and exercises, and will
-            serve total beginners as well as people with some programming
-            language experience, but not familiar with the combination of HTML,
-            CSS, and JavaScript.
-          </p>
-          <p>
-            <strong>Link: </strong>
-            <a
-              href="https://learning.oreilly.com/course/modern-html-/9781835880562/"
-              target="_blank"
-            >
-              Essential Guide to HTML
-            </a>
-          </p>
-          <button class="read-more">Read more</button>
-        </div>
-      </div>
 
-      <div class="card">
-        <div class="card-contents">
-          <img
-            src="images/Python_Course.jpg"
-            alt="The beginners guide to HTML5"
-          />
+        <div class="resources-card">
+          <div class="resources-card-contents">
+            <img
+              src="images/modern_HTML&CSS.jpg"
+              alt="The beginners guide to HTML5"
+            />
+          </div>
+          <div class="text">
+            <p><strong>Title:</strong>Modern HTML & CSS from the Beginning</p>
+            <p><strong>Author: </strong>Brad Traversy</p>
+            <p>
+              <strong>Description: </strong>In this 24-hour course, you will
+              learn everything you need to know about modern HTML and CSS.
+              Starting from the basics, this course will gradually introduce
+              advanced concepts like Flexbox, CSS Grid, animations, and
+              responsive design while engaging you with practical, hands-on
+              projects.
+            </p>
+            <p>
+              <strong>Link: </strong>
+              <a
+                href="https://learning.oreilly.com/course/modern-html-/9781835880562/"
+                target="_blank"
+              >
+                Modern HTML & CSS Course
+              </a>
+            </p>
+            <button class="read-more">Read more</button>
+          </div>
         </div>
-        <div class="text">
-          <p><strong>Title:</strong>The Complete Python Course</p>
-          <p><strong>Author: </strong>Jose Salvatierra Fuentes</p>
-          <p>
-            <strong>Description: </strong>In this 34 hr course, you'll learn
-            Python by embarking on a journey from beginner to expert levels,
-            building real-world applications as you progress. Start with the
-            basics and move on to advanced topics like object-oriented
-            programming, testing, APIs, and more.
-          </p>
-          <p>
-            <strong>Link: </strong>
-            <a
-              href="https://learning.oreilly.com/course/modern-html-/9781835880562/"
-              target="_blank"
-            >
-              Modern HTML & CSS Course
-            </a>
-          </p>
-          <button class="read-more">Read more</button>
-        </div>
-      </div>
+      </section>
+    </div>
 
-      <div class="card">
-        <div class="card-contents">
-          <img
-            src="images/modern_HTML&CSS.jpg"
-            alt="The beginners guide to HTML5"
-          />
-        </div>
-        <div class="text">
-          <p><strong>Title:</strong>Modern HTML & CSS from the Beginning</p>
-          <p><strong>Author: </strong>Brad Traversy</p>
-          <p>
-            <strong>Description: </strong>In this 24-hour course, you will learn
-            everything you need to know about modern HTML and CSS. Starting from
-            the basics, this course will gradually introduce advanced concepts
-            like Flexbox, CSS Grid, animations, and responsive design while
-            engaging you with practical, hands-on projects.
-          </p>
-          <p>
-            <strong>Link: </strong>
-            <a
-              href="https://learning.oreilly.com/course/modern-html-/9781835880562/"
-              target="_blank"
-            >
-              Modern HTML & CSS Course
-            </a>
-          </p>
-          <button class="read-more">Read more</button>
-        </div>
-      </div>
-    </section>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="db.js"></script>
   </body>
 </html>

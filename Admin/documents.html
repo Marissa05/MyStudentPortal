@@ -13,294 +13,238 @@
     <link rel="stylesheet" href="admin.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Edutrek</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">Dashboard<ion-icon name="clipboard"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="download.html">Downloads<ion-icon name="cloud-download"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upload.html">Upload<ion-icon name="cloud-upload"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resources.html">Resources<ion-icon name="albums"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="documents.html">Documents<ion-icon name="documents"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Public/contact.html">Contact Us<ion-icon name="call"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Public/login.html">Log Out<ion-icon name="log-out"></ion-icon></a>
-            </li>
-          </ul>
+    <div class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="download.html">Downloads</a>
+      <a href="upload.html">Uploads</a>
+      <a href="documents.html">Documents</a>
+      <a href="resources.html">Resources</a>
+      <a href="../public/contact.html">Contact</a>
+      <a href="../public/login.html">Login</a>
+      <a href="../public/register.html">Register</a>
+    </div>
+
+    <div class="content">
+      <h1>Documents</h1>
+
+      <!-- PROFILE HEADER -->
+      <section class="profile-pic-section">
+        <div class="profile-header">
+          <img src="images/profile.png" alt="Profile Picture" class="profile-pic" />
+          <div class="profile-info">
+            <p><strong>Full Name:</strong> user</p>
+            <p><strong>Email:</strong> user@example.com</p>
+            <p><strong>Phone:</strong> +27 123 456 789</p>
+            <p><strong>Birthday:</strong> 15 November 2006</p>
+          </div>
         </div>
-      </div>
-    </nav>
+      </section>
 
-    <section class="profile-pic-section">
-      <div class="profile-header">
-        <img
-          src="images/profile.png"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
-        <div class="profile-info">
-          <p><strong>Full Name:</strong> user</p>
-          <p><strong>Email:</strong> user@example.com</p>
-          <p><strong>Phone:</strong> +27 123 456 789</p>
-          <p><strong>Birthday:</strong> 15 November 2006</p>
+      <!-- PERSONAL DETAILS -->
+      <section class="personal-details">
+        <div class="documents"><h3>Personal Details</h3></div>
+        <div class="form-grid">
+          <div class="input-box">
+            <label>Preferred Name</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Region</label>
+            <select id="region" name="region">
+              <option>Please Select</option>
+              <option>Bloemfontein</option>
+              <option>Durban</option>
+              <option>Boksburg</option>
+              <option>Cape Town</option>
+              <option>Polokwane</option>
+              <option>Port Elizabeth</option>
+              <option>Porchefstroom</option>
+              <option>Pretoria</option>
+              <option>Roodepoort</option>
+              <option>Vereeniging</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Date of Birth</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Marital Status</label>
+            <select id="status" name="status">
+              <option>Please select</option>
+              <option>Single</option>
+              <option>Divorced</option>
+              <option>Married</option>
+              <option>Unknown</option>
+              <option>Widow(er)</option>
+            </select>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="personal-details">
-      <div class="documents">
-        <h3>Personal Details</h3>
-      </div>
+      <!-- CONTACT DETAILS -->
+      <section class="contact-details">
+        <div class="documents"><h3>Contact Details</h3></div>
+        <div class="form-grid">
+          <div class="input-box">
+            <label>Home Phone</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Cell Phone</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Email</label>
+            <input type="email" required />
+          </div>
+          <div class="input-box">
+            <label>Work Phone</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Fax</label>
+            <input type="text" required />
+          </div>
+        </div>
+      </section>
 
-      <div class="input-box">
-        <label>Prefered Name</label><br>
-        <input type="email" required /><br><br>
-      </div>
+      <!-- ADDRESS DETAILS -->
+      <section class="address-details">
+        <div class="documents"><h3>Address Details</h3></div>
+        <div class="form-grid">
+          <div class="input-box">
+            <label>Physical Address</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Suburb</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Postal Code</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Postal Address</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Suburb</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Postal Code</label>
+            <input type="text" required />
+          </div>
+        </div>
+      </section>
 
-      <div class="input-box">
-        <label>Region</label><br>
-        <select id="region" name="region">
-          <option value="Please Select">Please Select</option>
-          <option value="Bloemfontein">Bloemfontein</option>
-          <option value="Durban">Durban</option>
-          <option value="Boksburg">Boksburg</option>
-          <option value="Cape Town">Cape Town</option>
-          <option value="Polokwane">Polokwane</option>
-          <option value="Port Elizabeth">Port Elizabeth</option>
-          <option value="Porchefstroom">Porchefstroom</option>
-          <option value="Pretoria">Pretoria</option>
-          <option value="Roodepoort">Roodepoort</option>
-          <option value="Vereenig">Vereenig</option>
-        </select><br><br>
-      </div>
+      <!-- PROFILE INFO -->
+      <section class="profile">
+        <div class="documents"><h3>Profile</h3></div>
+        <div class="form-grid">
+          <div class="input-box">
+            <label>Where did you hear about us?</label>
+            <select>
+              <option>Please select</option>
+              <option>Google search</option>
+              <option>CTU Open Day</option>
+              <option>Outdoor ads</option>
+              <option>Print ads</option>
+              <option>Radio ads</option>
+              <option>School visits</option>
+              <option>Social Media</option>
+              <option>Walk-in</option>
+              <option>Websites</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Year Matriculated</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>School Attended</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Matriculation Status</label>
+            <select>
+              <option>Please select</option>
+              <option>Conditional</option>
+              <option>Full Exemption</option>
+              <option>Without</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Highest Qualification</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Tertiary Education</label>
+            <select>
+              <option>Please select</option>
+              <option>Yes</option>
+              <option>No</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Tertiary Institution</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Learning Needs</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Any Disabilities</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Reading Skills</label>
+            <select>
+              <option>Please select</option>
+              <option>Excellent</option>
+              <option>Average</option>
+              <option>Poor</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Reading Comments</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Writing Skills</label>
+            <select>
+              <option>Please select</option>
+              <option>Excellent</option>
+              <option>Average</option>
+              <option>Poor</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Writing Comments</label>
+            <input type="text" required />
+          </div>
+          <div class="input-box">
+            <label>Speaking Skills</label>
+            <select>
+              <option>Please select</option>
+              <option>Excellent</option>
+              <option>Average</option>
+              <option>Poor</option>
+            </select>
+          </div>
+          <div class="input-box">
+            <label>Speaking Comments</label>
+            <input type="text" required />
+          </div>
+        </div>
+      </section>
+    </div>
+    
 
-      <div class="input-box">
-        <label>Date of birth</label><br>
-        <input type="text" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Maritel status</label><br>
-        <select id="status" name="status">
-          <option value="Please select">Please select</option>
-          <option value="Single">Single</option>
-          <option value="Divorced">Divorced</option>
-          <option value="Married">Married</option>
-          <option value="Unknown">Unknown</option>
-          <option value="Widow(er)">Widow(er)</option>
-        </select><br>
-      </div>
-    </section>
-
-    <section class="contact-details">
-      <div class="documents">
-        <h3>Contact Details</h3>
-      </div>
-
-      <div class="input-box">
-        <label>home Phone</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Cell Phone</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Email</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Work Phone</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Fax</label><br>
-        <input type="email" required /><br><br>
-      </div>
-    </section>
-
-    <section class="address-details">
-      <div class="documents">
-        <h3>Address Details</h3>
-      </div>
-
-      <div class="input-box">
-        <label>Physical Address</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Suburb</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Postal Code</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Postal Address</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Suburb</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Postal Code</label><br>
-        <input type="email" required /><br><br>
-      </div>
-    </section>
-
-    <section class="profile">
-      <div class="documents">
-        <h3>Profile</h3>
-      </div>
-
-      <div class="input-box">
-        <label>Where did you hear about us?</label><br>
-        <select id="status" name="status">
-          <option value="Please select">Please select</option>
-          <option value="Google">Google search</option>
-          <option value="Open Day">CTU Open Day</option>
-          <option value="Outdoor ads">Outdoor ads(Billboards/Notice Boards)</option>
-          <option value="print ads">Print ads(Newspaper/Magazine)</option>
-          <option value="radio ads">Radio ads</option>
-          <option value="School visits">School visits</option>
-          <option value="social media">Social Media</option>
-          <option value=walk-ins">Walk in</option>
-          <option value="websites">Websites</option>
-        </select><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Year matriculated</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>School attended</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Matriculation status</label><br>
-        <select id="status" name="status">
-          <option value="Please select">Please select</option>
-          <option value="Conditional">Conditional</option>
-          <option value="Full Exemption">Full Exemption</option>
-          <option value="Without">Without</option>
-        </select><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Highest qualification</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Tertiary education</label><br>
-        <select id="education" name="education">
-          <option value="Please select">Please select</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
-        </select><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Tertiary institution</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Learning needs</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Any disabilities</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Reading skills</label><br>
-        <select id="skills" name="skills">
-          <option value="Please select">Please select</option>
-          <option value="Excellent">Excellent</option>
-          <option value="Average">Average</option>
-          <option value="Poor">Poor</option>
-      </select><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Reading comments</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Writing skills</label><br>
-        <select id="skills" name="skills">
-          <option value="Please select">Please select</option>
-          <option value="Excellent">Excellent</option>
-          <option value="Average">Average</option>
-          <option value="Poor">Poor</option>
-      </select><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Writing comments</label><br>
-        <input type="email" required /><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Speaking skills</label><br>
-        <select id="skills" name="skills">
-          <option value="Please select">Please select</option>
-          <option value="Excellent">Excellent</option>
-          <option value="Average">Average</option>
-          <option value="Poor">Poor</option>
-      </select><br><br>
-      </div>
-
-      <div class="input-box">
-        <label>Speaking comments</label><br>
-        <input type="email" required /><br><br>
-      </div>
-    </section>
+    
 
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -310,5 +254,6 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="db.js"></script>
   </body>
 </html>

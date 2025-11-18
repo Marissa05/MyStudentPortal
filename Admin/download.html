@@ -13,98 +13,73 @@
     <link rel="stylesheet" href="admin.css" />
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Edutrek</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="dashboard.html">Dashboard<ion-icon name="clipboard"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="download.html">Downloads<ion-icon name="cloud-download"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="upload.html">Upload<ion-icon name="cloud-upload"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="resources.html">Resources<ion-icon name="albums"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="documents.html">Documents<ion-icon name="documents"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Public/contact.html">Contact Us<ion-icon name="call"></ion-icon></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../Public/login.html">Log Out<ion-icon name="log-out"></ion-icon></a>
-            </li>
-          </ul>
+    <div class="sidebar">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="download.html">Downloads</a>
+      <a href="upload.html">Uploads</a>
+      <a href="documents.html">Documents</a>
+      <a href="resources.html">Resources</a>
+      <a href="../public/contact.html">Contact</a>
+      <a href="../public/login.html">Login</a>
+      <a href="../public/register.html">Register</a>
+    </div>
+
+    <div class="content">
+      <h1>Downloads</h1>
+
+      <section class="downloads">
+        <div class="download-items">
+          <table>
+            <thead>
+              <tr>
+                <th>File Name</th>
+                <th>Type</th>
+                <th>Size</th>
+                <th>Download</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>HTML Notes</td>
+                <td>PDF</td>
+                <td>2 MB</td>
+                <td><button>Download</button><input type="file" /></td>
+              </tr>
+
+              <tr>
+                <td>JavaScript Test</td>
+                <td>PDF</td>
+                <td>10 MB</td>
+                <td><button>Download</button><input type="file" /></td>
+              </tr>
+
+              <tr>
+                <td>HTML & CSS Assignment</td>
+                <td>PDF</td>
+                <td>8 MB</td>
+                <td><button>Download</button><input type="file" /></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </div>
-    </nav>
+      </section>
+    </div>
 
-    <h1>Downloads</h1>
-
-    <section class="downloads">
-      <div class="download-items">
-        <table>
-          <thead>
-            <tr>
-              <th>File Name</th>
-              <th>Type</th>
-              <th>Size</th>
-              <th>Download</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td>HTML Notes</td>
-              <td>PDF</td>
-              <td>2 MB</td>
-              <td><button>Download</button></td>
-            </tr>
-
-            <tr>
-              <td>JavaScript Test</td>
-              <td>PDF</td>
-              <td>10 MB</td>
-              <td><button>Download</button></td>
-            </tr>
-
-            <tr>
-              <td>HTML & CSS Assignment</td>
-              <td>PDF</td>
-              <td>8 MB</td>
-              <td><button>Download</button></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="db.js"></script>
   </body>
 </html>
