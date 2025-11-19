@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const password = document.getElementById("regPassword").value.trim();
     const confirm = document.getElementById("regConfirmPassword").value.trim();
 
-    if (!fullName || !email || !password || !confirm) {
+    if (!fullName || !email || !password || !confirm ) {
       alert("Please fill in all fields.");
       return;
     }
