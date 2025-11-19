@@ -263,3 +263,120 @@ header h1 {
     font-size: 40px;
   }
 }
+
+
+/* ===============================
+   CONTACT PAGE
+================================*/
+.contact-box {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Form headings */
+.contact-box h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Input boxes */
+.contact-box .input-box {
+  width: 100%;
+  position: relative;
+  margin: 15px 0;
+}
+
+.contact-box .input-box input,
+.contact-box .input-box textarea {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: white;
+  outline: none;
+}
+
+.contact-box .input-box textarea {
+  height: 100px;
+  resize: none;
+}
+
+.contact-box .input-box label {
+  position: absolute;
+  top: -10px;
+  left: 10px;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+  background: linear-gradient(135deg, #0f0f1a, #1b1b2d);
+  padding: 0 5px;
+}
+
+/* Button */
+.contact-box button {
+  width: 100%;
+  background: #6a5acd;
+  border: none;
+  border-radius: 25px;
+  padding: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.contact-box button:hover {
+  background: #7b6df7;
+}
+
+/* Contact details */
+.contact-box .details {
+  text-align: center;
+  margin-top: 30px;
+  line-height: 1.6;
+  color: white;
+}
+
+/* Make sure content is not hidden behind sidebar */
+.content {
+  margin-left: 250px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .content {
+    margin-left: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    position: absolute;
+    left: -250px;
+    transition: 0.4s;
+  }
+  .sidebar.open {
+    left: 0;
+  }
+  .content {
+    margin-left: 0;
+    padding: 20px;
+  }
+  .contact-box {
+    width: 90%;
+    padding: 30px;
+  }
+}

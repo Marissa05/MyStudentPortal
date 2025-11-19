@@ -1,33 +1,37 @@
-
-// ---------- LOGIN ----------
+document.addEventListener("DOMContentLoaded", () => {
   const loginForm = document.getElementById("loginForm");
-  if (loginForm) {
-    loginForm.addEventListener("submit", (e) => {
-      e.preventDefault();
 
-      const emailInput = document.getElementById("loginEmail").value.trim();
-      const passwordInput = document.getElementById("loginPassword").value.trim();
+  loginForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-      const savedUser = JSON.parse(localStorage.getItem("user"));
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
 
-      if (!savedUser) {
-        alert("No registered account found. Please register first.");
-        return;
-      }
+    const request = indexedDB.open("UserDB", 1);
 
-      if (emailInput === savedUser.email && passwordInput === savedUser.password) {
-        // Save full name for dashboard greeting
-        localStorage.setItem("username", savedUser.fullName);
+    request.onsuccess = () => {
+      const db = request.result;
 
-        // Redirect to dashboard
-        window.location.href = "../admin/dashboard.html";
-      } else {
-        alert("Incorrect email or password!");
-      }
-    });
-  }
+      const tx = db.transaction("users", "readonly");
+      const store = tx.objectStore("users");
 
+      const getUser = store.get(email);
 
+      getUser.onsuccess = () => {
+        const user = getUser.result;
 
+        if (!user) {
+          alert("No account found with that email.");
+          return;
+        }
 
-  
+        if (user.password === password) {
+          localStorage.setItem("username", user.fullName);
+          window.location.href = "../admin/dashboard.html";
+        } else {
+          alert("Incorrect password.");
+        }
+      };
+    };
+  });
+});

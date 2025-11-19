@@ -1,33 +1,44 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ---------- REGISTER ----------
   const regForm = document.getElementById("registerForm");
-  if (regForm) {
-    regForm.addEventListener("submit", (e) => {
-      e.preventDefault();
 
-      const fullName = document.getElementById("fullName").value.trim();
-      const email = document.getElementById("regEmail").value.trim();
-      const password = document.getElementById("regPassword").value.trim();
-      const confirm = document.getElementById("regConfirm").value.trim();
+  regForm.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-      if (!fullName || !email || !password || !confirm) {
-        alert("Please fill in all fields.");
-        return;
-      }
+    const fullName = document.getElementById("fullName").value.trim();
+    const email = document.getElementById("regEmail").value.trim();
+    const password = document.getElementById("regPassword").value.trim();
+    const confirm = document.getElementById("regConfirmPassword").value.trim();
 
-      if (password !== confirm) {
-        alert("Passwords do not match.");
-        return;
-      }
+    if (!fullName || !email || !password || !confirm) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    if (password !== confirm) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    const request = indexedDB.open("UserDB", 1);
+
+    request.onsuccess = () => {
+      const db = request.result;
+
+      const tx = db.transaction("users", "readwrite");
+      const store = tx.objectStore("users");
 
       const user = { fullName, email, password };
-      localStorage.setItem("user", JSON.stringify(user));
 
-      alert("Registration successful!");
-      window.location.href = "login.html";
-    });
-  }
+      const addUser = store.add(user);
 
-  
+      addUser.onsuccess = () => {
+        alert("Registration successful!");
+        window.location.href = "login.html"; // redirect
+      };
+
+      addUser.onerror = () => {
+        alert("This email is already registered.");
+      };
+    };
+  });
 });
-
