@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     request.onsuccess = () => {
       const db = request.result;
-
       const tx = db.transaction("users", "readonly");
       const store = tx.objectStore("users");
 
@@ -26,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         if (user.password === password) {
-          localStorage.setItem("username", user.fullName);
+          // Save the fullName to localStorage so dashboard can greet
+          localStorage.setItem("username", user.fullName); 
           window.location.href = "../admin/dashboard.html";
         } else {
           alert("Incorrect password.");

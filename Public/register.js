@@ -1,28 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
   const regForm = document.getElementById("registerForm");
 
-  regForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+  // Open or create IndexedDB
+  const request = indexedDB.open("UserDB", 1);
 
-    const fullName = document.getElementById("fullName").value.trim();
-    const email = document.getElementById("regEmail").value.trim();
-    const password = document.getElementById("regPassword").value.trim();
-    const confirm = document.getElementById("regConfirmPassword").value.trim();
-
-    if (!fullName || !email || !password || !confirm ) {
-      alert("Please fill in all fields.");
-      return;
+  request.onupgradeneeded = () => {
+    const db = request.result;
+    // Create object store "users" with email as the unique key
+    if (!db.objectStoreNames.contains("users")) {
+      db.createObjectStore("users", { keyPath: "email" });
     }
+  };
 
-    if (password !== confirm) {
-      alert("Passwords do not match.");
-      return;
-    }
+  request.onsuccess = () => {
+    const db = request.result;
 
-    const request = indexedDB.open("UserDB", 1);
+    regForm.addEventListener("submit", (e) => {
+      e.preventDefault();
 
-    request.onsuccess = () => {
-      const db = request.result;
+      const fullName = document.getElementById("fullName").value.trim();
+      const email = document.getElementById("regEmail").value.trim();
+      const password = document.getElementById("regPassword").value.trim();
+      const confirm = document.getElementById("regConfirmPassword").value.trim();
+
+      if (!fullName || !email || !password || !confirm) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      if (password !== confirm) {
+        alert("Passwords do not match.");
+        return;
+      }
 
       const tx = db.transaction("users", "readwrite");
       const store = tx.objectStore("users");
@@ -32,13 +41,17 @@ document.addEventListener("DOMContentLoaded", () => {
       const addUser = store.add(user);
 
       addUser.onsuccess = () => {
-        alert("Registration successful!");
-        window.location.href = "login.html"; // redirect
+        alert("Registration successful! You can now log in.");
+        window.location.href = "login.html"; // redirect to login
       };
 
       addUser.onerror = () => {
         alert("This email is already registered.");
       };
-    };
-  });
+    });
+  };
+
+  request.onerror = () => {
+    console.error("Database failed to open");
+  };
 });

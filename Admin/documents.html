@@ -17,11 +17,12 @@
       <a href="dashboard.html">Dashboard</a>
       <a href="download.html">Downloads</a>
       <a href="upload.html">Uploads</a>
-      <a href="documents.html " style="background-color: #6a5acd; color:white;">Documents</a>
+      <a href="documents.html " style="background-color: #6a5acd; color: white"
+        >Documents</a
+      >
       <a href="resources.html">Resources</a>
       <a href="../public/contact.html">Contact</a>
       <a href="../public/login.html">Log Out</a>
-      
     </div>
 
     <div class="content">
@@ -30,11 +31,26 @@
       <!-- PROFILE HEADER -->
       <section class="profile-pic-section">
         <div class="profile-header">
-          <img src="images/profile.png" alt="Profile Picture" class="profile-pic" />
+          <div class="profile-picture-container">
+            <img
+              id="profilePic"
+              src="images/profile.png"
+              alt="Profile Picture"
+              class="profile-pic"
+            />
+            <input
+              type="file"
+              id="uploadPic"
+              accept="image/*"
+              style="display: none"
+            />
+            <button id="changePicBtn" class="btn btn-secondary btn-sm">
+              Change Picture
+            </button>
+          </div>
+
           <div class="profile-info">
-            <p><strong>Full Name:</strong> </p>
-            <p><strong>Email:</strong> </p>
-            <p><strong>Student Number:</strong> </p>
+            <p><strong>Full Name: </strong><span id="displayName"></span></p>
           </div>
         </div>
       </section>
@@ -241,18 +257,61 @@
         </div>
       </section>
     </div>
-    
 
-    
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
 
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+
     <script src="db.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Display user name
+        const displayName = document.getElementById("displayName");
+        const savedName = localStorage.getItem("username");
+        if (!savedName) {
+          // redirect to login if not logged in
+          window.location.href = "../public/login.html";
+          return;
+        }
+        displayName.textContent = savedName;
+
+        // Profile picture functionality
+        const profilePic = document.getElementById("profilePic");
+        const changePicBtn = document.getElementById("changePicBtn");
+        const uploadPic = document.getElementById("uploadPic");
+
+        const savedPic = localStorage.getItem("profilePic");
+        if (savedPic) profilePic.src = savedPic;
+
+        changePicBtn.addEventListener("click", () => uploadPic.click());
+
+        uploadPic.addEventListener("change", () => {
+          const file = uploadPic.files[0];
+          if (!file) return;
+
+          const reader = new FileReader();
+          reader.onload = () => {
+            profilePic.src = reader.result;
+            localStorage.setItem("profilePic", reader.result);
+          };
+          reader.readAsDataURL(file);
+        });
+      });
+    </script>
+
+    <script src="documents.js"></script>
   </body>
 </html>
