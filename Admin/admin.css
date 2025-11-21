@@ -9,6 +9,8 @@ body {
   padding: 0;
 }
 
+
+
 /* ===============================
    SIDEBAR
 ================================*/
@@ -160,8 +162,6 @@ table tr:hover {
 }
 
 
-
-
 .input-box label {
   margin-bottom: 5px;
   font-weight: 500;
@@ -181,6 +181,28 @@ table tr:hover {
   margin-bottom: 15px;
   font-size: 1.3rem;
 }
+
+select {
+  background-color: rgba(255, 255, 255, 0.05); /* current background */
+  color: white;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 1rem;
+}
+
+
+select::-ms-expand {
+  display: none;
+}
+
+
+select option {
+  background-color: rgba(0, 0, 0, 0.3); /* darker background for dropdown items */
+  color: white;
+  padding: 5px;
+}
+
 
 /* ===============================
    PROFILE PICTURE STYLING
@@ -216,6 +238,7 @@ table tr:hover {
 #changePicBtn:hover {
   background: #7a6df7;
 }
+
 
 
 
@@ -335,6 +358,24 @@ table tr:hover {
     width: 90%;
     max-width: 100%;
   }
+}
+
+.footer {
+  background-color: #11121a; /* same as sidebar for consistency */
+  color: #d9d9d9;            /* light text color */
+  text-align: center;
+  padding: 15px 0;
+  position: relative;        /* stays below content */
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 250px;   /* sidebar width */
+  width: calc(100% - 250px);
 }
 
 

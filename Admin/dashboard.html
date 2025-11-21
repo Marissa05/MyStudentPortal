@@ -24,7 +24,7 @@
       <a href="documents.html">Documents</a>
       <a href="resources.html">Resources</a>
       <a href="../public/contact.html">Contact</a>
-      <a href="../public/login.html">Log Out</a>
+      <a href="../public/login.html" style="color: red">Log Out</a>
     </div>
 
     <!-- CONTENT -->
@@ -47,7 +47,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: 12px;
           "
         >
           <h1>Welcome, <span id="userName">Student</span>!</h1>
@@ -172,6 +171,10 @@
       </section>
     </div>
 
+    <footer class="footer">
+      <p>Copyright &copy; 2025 EduTrack. All rights reserved</p>
+    </footer>
+
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -190,17 +193,16 @@
 
     <script src="db.js"></script>
 
-  <script>
-document.addEventListener("DOMContentLoaded", () => {
-  const userNameSpan = document.getElementById("userName");
-  const userName = localStorage.getItem("username");
-  if (!userName) {
-    window.location.href = "../public/login.html"; // redirect if not logged in
-  } else {
-    userNameSpan.textContent = userName;
-  }
-});
-</script>
-
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const userNameSpan = document.getElementById("userName");
+        const userName = localStorage.getItem("username");
+        if (!userName) {
+          window.location.href = "../public/login.html"; // redirect if not logged in
+        } else {
+          userNameSpan.textContent = userName;
+        }
+      });
+    </script>
   </body>
 </html>
