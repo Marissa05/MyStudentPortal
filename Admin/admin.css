@@ -10,7 +10,6 @@ body {
 }
 
 
-
 /* ===============================
    SIDEBAR
 ================================*/
@@ -127,20 +126,38 @@ table tr:hover {
 /* ===============================
    BUTTONS
 ================================*/
-.btn-download {
-  padding: 8px 14px;
-  background: #6a5acd;
-  border: none;
+.downloads button{
+  background-color: #6a5acd;
   color: white;
+  padding: 8px 14px;
   border-radius: 6px;
-  font-size: 14px;
   cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
   transition: 0.25s;
 }
 
-.btn-download:hover {
-  background: #7b6df7;
+.downloads button:hover{
+  background-color: #4a4185;
 }
+
+.upload-btn {
+  background-color: #6a5acd;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.9rem;
+  transition: 0.25s;
+}
+
+.upload-btn:hover {
+  background-color: #4a4185;
+}
+
+
+
 
 /* ===============================
    INPUTS AND FORMS
