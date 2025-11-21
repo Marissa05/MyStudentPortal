@@ -7,6 +7,7 @@ body {
   font-family: "Segoe UI", sans-serif;
   margin: 0;
   padding: 0;
+  padding-bottom: 70px; /* equal to footer height */
 }
 
 
@@ -349,20 +350,25 @@ select option {
 }
 
 .resources-card .read-more {
+  background-color: #6a5acd;  /* button color */
+  color: white !important;     /* force white text */
   padding: 8px 14px;
-  background: #6a5acd;
-  border: none;
-  color: white;
   border-radius: 6px;
-  font-size: 14px;
   cursor: pointer;
-  align-self: flex-start;
+  display: inline-block;
+  font-size: 0.9rem;
   transition: 0.25s;
+  border: none;
+  text-align: center;
+  text-decoration: none;
 }
 
+/* hover state */
 .resources-card .read-more:hover {
-  background: #7b6df7;
+  background-color: #4a4185;
+  color: white !important;  /* keep text visible on hover */
 }
+
 
 /* RESPONSIVE: stack cards on small screens */
 @media (max-width: 900px) {
